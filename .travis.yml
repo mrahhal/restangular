@@ -1,9 +1,20 @@
+sudo: false
 language: node_js
 node_js:
-  - "0.10"
-
+- stable
 before_script:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-  - 'npm install -g bower grunt-cli'
-  - 'bower install --config.interactive=false'
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+- npm install -qg bower grunt-cli
+- npm install
+- bower install
+script: grunt
+deploy:
+  provider: npm
+  email: m.r992@hotmail.com
+  api_key:
+    secure: q+GZiUelFWQX0TvIYroBSwBcDB4y4EDlCBfTANCTQfYVQYUfBHWeONl2NGz1s8BKxRaUf9/OdIk/MHMIEd0NpZgz7IO7W+lX8jS3PqCxQ//Up/kBpP+gij96JoPBxfUYxegux9wVoGrgcHqGp29cFQJjqB/gsnqMyukPC6F6Zidp2+hb9FNbYufG+Tq/GoYFiTCjP/x3AavF0SJz/Aujb8520zBsDDNhrfOjtZ8BP/MP4djxODk5nEG30maXObmVS4SEXMdJI7INN/zMhc/P305AbjWjNj0/jO/fpcWolLSSBhJzo7f6ujef7pB34f3jls3W7g0RrhQZDPY7X2YEwyzXZH3GEA9wWmNExWuCybif8hgQx+VMno+ZK5J0mDbfc1eODGxaSvoMrdGdXYhei/yyS9nyDn2IHhRwFKCrzy7iSLs4JiuYDTdbg0OLwygOAgSuwX6k/nYs4ckKSHbe92u7oU2c4rWzAIyv+HeQatKoEdtmGiz5oURnutHHUJjBY9jv3Hb6NntSC4So6zlU3JNsALurLfafZUlVED40B4SQZOjNvA7CslnysBy0e86ELYcjqVJrancE7LhF9PpVjbcT0d3buKwHgjU2yyf7ngDdHQ69KdnE+9bfSx07osnG+fZPqLpIHbZuqb9/I0Lm/R88AlW3T0WDXoPpLU3z1xg=
+  on:
+    tags: true
+notifications:
+  email: false
