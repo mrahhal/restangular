@@ -1335,6 +1335,7 @@ restangular.provider('Restangular', function() {
         var collection = (parent || service).all(route);
         serv.one = _.bind(one, (parent || service), parent, route);
         serv.post = _.bind(collection.post, collection);
+        serv.get = _.bind(collection.get, collection);
         serv.getList = _.bind(collection.getList, collection);
         serv.withHttpConfig = _.bind(collection.withHttpConfig, collection);
 
