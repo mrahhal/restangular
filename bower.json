@@ -1,6 +1,6 @@
 {
   "name": "mr-restangular",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "main": "./dist/restangular.js",
   "description": "Restful Resources service for AngularJS apps",
   "homepage": "https://github.com/mrahhal/restangular",
