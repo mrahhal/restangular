@@ -1,11 +1,8 @@
 {
-  "name": "restangular",
+  "name": "mr-restangular",
   "main": "./dist/restangular.js",
   "description": "Restful Resources service for AngularJS apps",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/mgonto/restangular.git"
-  },
+  "homepage": "https://github.com/mrahhal/restangular",
   "dependencies": {
     "lodash": ">=1.3.0",
     "angular": "~1.x"
