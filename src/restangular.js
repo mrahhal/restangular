@@ -65,7 +65,7 @@ restangular.provider('Restangular', function() {
       config.defaultHttpFields = values;
       return this;
     };
-    
+
     /**
      * Always return plain data, no restangularized object
     **/
@@ -951,8 +951,9 @@ restangular.provider('Restangular', function() {
         });
         _.each(requestMethods, function(requestFunc, name) {
           var callOperation = name === 'delete' ? 'remove' : name;
-          _.each(['do', 'custom'], function(alias) {
-            elem[alias + name.toUpperCase()] = _.bind(requestFunc, elem, callOperation);
+          _.each(['do', 'custom'], function (alias) {
+            var fullName = alias + name.toUpperCase();
+            elem[config.restangularFields[fullName]] = _.bind(requestFunc, elem, callOperation);
           });
         });
         elem[config.restangularFields.customGETLIST] = _.bind(fetchFunction, elem);
