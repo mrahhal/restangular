@@ -5,7 +5,7 @@
   "filename": "restangular.min.js",
   "main": "./dist/restangular.min.js",
   "homepage": "https://github.com/mrahhal/restangular",
-  "author": "Martin Gontovnikas <martin@gon.to>",
+  "author": "Mohammad Rahhal <m.r992@hotmail.com>",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mrahhal/restangular.git"

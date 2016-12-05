@@ -1,18 +1,13 @@
 #Restangular
 
-[![Build Status](https://travis-ci.org/mgonto/restangular.svg?branch=master)](https://travis-ci.org/mgonto/restangular)
-[![PayPayl donate button](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=martin%40gon%2eto&lc=US&item_name=Martin%20Gontovnikas&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted "Donate once-off to this project using Paypal")
-[![Donate on Gittip](http://img.shields.io/gittip/mgonto.svg)](https://www.gittip.com/mgonto/)
-<a href="https://twitter.com/intent/tweet?hashtags=&original_referer=http%3A%2F%2Fgithub.com%2F&text=Check+out+Restangular%2C+a+service+for+%23AngularJS+that+makes+it+easy+to+use+Rest+APIs&tw_p=tweetbutton&url=https%3A%2F%2Fgithub.com%2Fmgonto%2Frestangular" target="_blank">
-  <img src="http://jpillora.com/github-twitter-button/img/tweet.png"></img>
-</a>
+[![Travis](https://img.shields.io/travis/mrahhal/restangular.svg)](https://travis-ci.org/mrahhal/restangular)
+[![npm](https://img.shields.io/npm/v/mr-restangular.svg)](https://www.npmjs.com/package/mr-restangular)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+This is a fork of Restangular that fixes lots of issues.
 
 Restangular is an AngularJS service that simplifies common GET, POST, DELETE, and UPDATE requests with a minimum of client code.
 It's a perfect fit for any WebApp that consumes data from a RESTful API.
-
-**Check out a, [live demo on plunkr](http://plnkr.co/edit/d6yDka?p=preview).** It uses the same example as the official [Angular Javascript Project](http://angularjs.org/#wire-up-a-backend)... but Restangularized!
-
-You can also **check out [a video introduction of a talk I gave at Devoxx France](http://www.parleys.com/play/535a189ee4b0c5ba17d43455/chapter1/about)** about Restangular
 
 #Table of contents
 
@@ -1304,14 +1299,6 @@ So, why not use it? If you've never heard of them, by using Restangular, you cou
 
 **[Back to top](#table-of-contents)**
 
-# Supported Angular versions
-
-Restangular supports all Angular versions from 1.0.X - 1.5.X
-
-Also, when using Restangular with version >= 1.1.4, in case you're using Restangular inside a callback not handled by Angular, you have to wrap the whole request with `$scope.apply` to make it work or you need to run one extra `$digest` manually. Check out https://github.com/mgonto/restangular/issues/71
-
-**[Back to top](#table-of-contents)**
-
 # Server Frameworks
 
 Users reported that this server frameworks play real nice with Restangular, as they let you create a Nested RESTful Resources API easily:
@@ -1326,38 +1313,5 @@ Users reported that this server frameworks play real nice with Restangular, as t
 * Symfony2 with FOSRestBundle (PHP)
 * Microsoft ASP.NET Web API 2
 * Grails Framework ([example](https://github.com/rmondejar/grails-angular-duo))
-
-**[Back to top](#table-of-contents)**
-
-# Releases Notes
-
-New releases notes are together with releases in GitHub at: https://github.com/mgonto/restangular/releases
-
-To see old releases notes, [you can click here](https://github.com/mgonto/restangular/blob/master/CHANGELOG.md)
-
-**[Back to top](#table-of-contents)**
-
-# Contributors
-
-* Martin Gontovnikas ([@mgonto](https://twitter.com/mgonto))
-* Paul Dijou ([@paul_dijou](https://twitter.com/paul_dijou))
-
-**[Back to top](#table-of-contents)**
-
-# License
-
-The MIT License
-
-Copyright (c) 2014 Martin Gontovnikas http://www.gon.to/
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/mgonto/restangular/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 **[Back to top](#table-of-contents)**
