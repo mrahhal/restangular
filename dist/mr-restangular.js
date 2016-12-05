@@ -1,7 +1,7 @@
 /**
  * Restful Resources service for AngularJS apps
- * @version v1.5.4 - 2016-12-05 * @link https://github.com/mrahhal/restangular
- * @author Martin Gontovnikas <martin@gon.to>
+ * @version v1.5.6 - 2016-12-05 * @link https://github.com/mrahhal/restangular
+ * @author Mohammad Rahhal <m.r992@hotmail.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */(function (root, factory) {
   // https://github.com/umdjs/umd/blob/master/templates/returnExports.js
