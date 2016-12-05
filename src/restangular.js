@@ -1330,12 +1330,12 @@
 				function toService(route, parent) {
 					var knownCollectionMethods = _.values(config.restangularFields);
 					var serv = {};
-					var collection = (parent || service).all(route);
-					serv.one = _.bind(one, (parent || service), parent, route);
-					serv.post = _.bind(collection[config.restangularFields.post], collection);
-					serv.get = _.bind(collection[config.restangularFields.get], collection);
-					serv.getList = _.bind(collection[config.restangularFields.getList], collection);
-					serv.withHttpConfig = _.bind(collection[config.restangularFields.withHttpConfig], collection);
+					var collection = (parent || service)[config.restangularFields.all](route);
+					serv[config.restangularFields.one] = _.bind(one, (parent || service), parent, route);
+					serv[config.restangularFields.post] = _.bind(collection[config.restangularFields.post], collection);
+					serv[config.restangularFields.get] = _.bind(collection[config.restangularFields.get], collection);
+					serv[config.restangularFields.getList] = _.bind(collection[config.restangularFields.getList], collection);
+					serv[config.restangularFields.withHttpConfig] = _.bind(collection[config.restangularFields.withHttpConfig], collection);
 
 					for (var prop in collection) {
 						if (collection.hasOwnProperty(prop) && _.isFunction(collection[prop]) && !_.includes(knownCollectionMethods, prop)) {
@@ -1354,21 +1354,21 @@
 
 				service.withConfig = _.bind(withConfigurationFunction, service);
 
-				service.one = _.bind(one, service, null);
+				service[config.restangularFields.one] = _.bind(one, service, null);
 
-				service.all = _.bind(all, service, null);
+				service[config.restangularFields.all] = _.bind(all, service, null);
 
-				service.several = _.bind(several, service, null);
+				service[config.restangularFields.several] = _.bind(several, service, null);
 
-				service.oneUrl = _.bind(oneUrl, service, null);
+				service[config.restangularFields.oneUrl] = _.bind(oneUrl, service, null);
 
-				service.allUrl = _.bind(allUrl, service, null);
+				service[config.restangularFields.allUrl] = _.bind(allUrl, service, null);
 
-				service.stripRestangular = _.bind(stripRestangular, service);
+				service.stripRestangular = service.strip = _.bind(stripRestangular, service);
 
-				service.restangularizeElement = _.bind(restangularizeElem, service);
+				service.restangularizeElement = service.fromElement = _.bind(restangularizeElem, service);
 
-				service.restangularizeCollection = _.bind(restangularizeCollectionAndElements, service);
+				service.restangularizeCollection = service.fromCollection = _.bind(restangularizeCollectionAndElements, service);
 
 				return service;
 			}
