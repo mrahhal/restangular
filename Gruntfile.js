@@ -46,11 +46,8 @@ module.exports = function(grunt) {
         dest: '<%= dirs.dest %>/<%= pkg.name %>.min.js'
       }
     },
-    jshint: {
-      files: ['Gruntfile.js', 'src/*.js'],
-      options: {
-        jshintrc: true
-      }
+    eslint: {
+        target: ['Gruntfile.js', 'src/*.js']
     },
     karma: {
       options: {
@@ -92,8 +89,8 @@ module.exports = function(grunt) {
     }
   });
 
-  // Load the plugin that provides the "jshint" task.
-  grunt.loadNpmTasks('grunt-contrib-jshint');
+  // Load the plugin that provides the "eslint" task.
+  grunt.loadNpmTasks('grunt-eslint');
 
   // Load the plugin that provides the "concat" task.
   grunt.loadNpmTasks('grunt-contrib-concat');
@@ -111,9 +108,10 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-zip');
 
-
   // Default task.
   grunt.registerTask('default', ['build']);
+
+  grunt.registerTask('lint', ['eslint']);
 
   // Build task.
   grunt.registerTask('build', ['bowerInstall', 'karma:build', 'karma:buildUnderscore', 'concat', 'uglify', 'zip']);

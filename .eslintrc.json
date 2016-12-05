@@ -1,0 +1,37 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "globals": {
+    "require": true,
+    "define": true,
+    "module": true,
+    "_": true,
+    "angular": true
+  },
+  "extends": "eslint:recommended",
+  "rules": {
+    "indent": [
+      "off",
+      "tab",
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "linebreak-style": [
+      "off"
+    ],
+    "quotes": [
+      "warn",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "no-unused-vars": [
+      "off"
+    ]
+  }
+}
