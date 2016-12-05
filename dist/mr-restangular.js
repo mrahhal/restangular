@@ -1,6 +1,6 @@
 /**
  * Restful Resources service for AngularJS apps
- * @version v1.5.3 - 2016-11-30 * @link https://github.com/mrahhal/restangular
+ * @version v1.5.4 - 2016-12-05 * @link https://github.com/mrahhal/restangular
  * @author Martin Gontovnikas <martin@gon.to>
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */(function (root, factory) {
@@ -1032,7 +1032,7 @@ restangular.provider('Restangular', function() {
       }
 
       function getById(id, reqParams, headers){
-        return this.customGET(id.toString(), reqParams, headers);
+        return this[config.restangularFields.customGET](id.toString(), reqParams, headers);
       }
 
       function putElementFunction(idx, params, headers) {
