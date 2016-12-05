@@ -1027,7 +1027,7 @@ restangular.provider('Restangular', function() {
       }
 
       function getById(id, reqParams, headers){
-        return this.customGET(id.toString(), reqParams, headers);
+        return this[config.restangularFields.customGET](id.toString(), reqParams, headers);
       }
 
       function putElementFunction(idx, params, headers) {
